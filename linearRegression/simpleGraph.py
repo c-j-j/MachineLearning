@@ -8,6 +8,7 @@ def generate_scatter_graph(x_data,y_data,image_file, x_label="Population of City
     ax = fig.add_subplot(1,1,1) # one row, one column, first plot
     # Plot the data.
     ax.scatter(x_data, y_data, color="red", marker="^")
+    ax.plot(x_data,y_data,color="green")
     # Add a title.
     ax.set_title(title)
     # Add some axis labels.
@@ -15,5 +16,7 @@ def generate_scatter_graph(x_data,y_data,image_file, x_label="Population of City
     ax.set_ylabel(y_label)
     # Produce an image.
     fig.savefig(image_file)
+
+    return ax
 
 
